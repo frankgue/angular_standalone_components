@@ -1,0 +1,19 @@
+@if (showAddTaskForm) {
+    <app-new-task  (showAddTaskFormEvent)="closeTaskDialog()" [currentUserId]="userId" />
+}
+
+<section id="tasks">
+    <header>
+        <h2>{{username}}'s Tasks</h2>
+        <menu>
+            <button (click)="showTaskDialog()">Add Task</button>
+        </menu>
+    </header>
+    <ul>
+        @for(task of selectedUserTasks; track task.id) {
+            <li>
+            <app-task [task]="task"/>
+        </li>
+        }
+    </ul>
+</section>
