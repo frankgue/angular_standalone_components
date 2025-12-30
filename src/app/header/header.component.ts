@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  standalone: false,
+  // imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

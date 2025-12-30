@@ -2,14 +2,13 @@ import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular
 import {
   FormControl,
   FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
 } from '@angular/forms';
 import { TasksService } from '../../services/tasks.service';
 
 @Component({
   selector: 'app-new-task',
-  imports: [ReactiveFormsModule, FormsModule],
+  standalone: false,
+  // imports: [ReactiveFormsModule, FormsModule],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css',
 })
